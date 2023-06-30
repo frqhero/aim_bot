@@ -29,9 +29,9 @@ def some(query):
         if not aim['in_stock']:
             continue
         list_output_str.append(
-            f'ШК {aim["barcode"]} размер {aim["size"]} вес {aim["weight"]} цена {aim["price"]}'
+            f'ШК {aim["barcode"]} размер {aim["size"]} вес {aim["weight"]} цена {aim["price"]} склад {aim["warehouse"]}'
         )
-    secondary_result = '\n'.join(list_output_str)
+    secondary_result = '\n\n'.join(list_output_str)
     if len(secondary_result) < 4096:
         return secondary_result
     third_result = {}
